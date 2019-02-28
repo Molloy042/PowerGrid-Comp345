@@ -35,13 +35,23 @@ void Graph::printGraph(Graph *graph) {
 	//loop over each adjacent list
 	for (int i = 0; i < graph->V; i++) {
 		AdjListNode *root = graph->arr[i].getHead();
-		std::cout << "Adjacency list of vertex " << root->getData()->getName() << std::endl;
+		std::cout << "Adjacency list of City:  " << i << std::endl;
 		//loop over each node in list
 		while (root != NULL) {
 			std::cout << root->getData()->getName() << " -> ";
 			root = root-> getNext();
 		}
-		std::cout << std::endl;
+		std::cout << std::endl << endl;
 	}
 };
+
+void Graph::printarr(Graph *graph) {
+
+	//loop over each adjacent list
+	for (int i = 0; i < graph->V; i++) {
+		int root = graph->arr[i].getHead()->getData()->getNum();
+		cout << root  << endl;
+	}
+};
+
 

@@ -8,7 +8,7 @@ using namespace std;
 AdjListNode *AdjListNode::newAdjListNode(City& data)
 {
 	//City c(data.getNum(), data.getName(), data.getFull());
-	City* city_ptr = new City(data.getNum(), data.getName(), data.getFull());
+	City* city_ptr = new City(data.getNum(), data.getName());
 	AdjListNode *nptr = new AdjListNode;
 	nptr->data =  city_ptr;
 	nptr->next = NULL;

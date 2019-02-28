@@ -6,6 +6,7 @@
  */
 
 #include "Player.h"
+#include "City.h"
 using namespace std;
 
 Player::Player(){
@@ -25,12 +26,5 @@ Player::Player(int p_num, string player_name, int player_money, string player_co
 void Player::setElektro(int money_spent){
 	elektro = elektro - money_spent;
 }
-
-
-/*int main() {
-	Player c(1,"asdven", 0, "green");
-	cout << c.getPlayer();
-	return 0;
-}*/
 
 

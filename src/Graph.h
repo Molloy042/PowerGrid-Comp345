@@ -17,6 +17,7 @@ public:
 	static Graph *createGraph(int V);
 	static void addEdge(Graph *graph, City& src, City& dest);
 	static void printGraph(Graph *graph);
+	static void printarr(Graph *graph);
 };
 
 #endif Graph_H

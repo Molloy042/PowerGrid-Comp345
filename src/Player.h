@@ -7,7 +7,7 @@
 
 #ifndef PLAYER_H_
 #define PLAYER_H_
-
+#include "City.h"
 #include <iostream>
 using namespace std;
 
@@ -30,6 +30,7 @@ class Player{
 		int elektro;
 		string colour;
 		int player_num;
+		//City cityOwned;
 
 };
 
