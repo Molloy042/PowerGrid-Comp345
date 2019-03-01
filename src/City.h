@@ -5,29 +5,40 @@
  *      Author: t_lall
  */
 
+
 #ifndef CITY_H_
 #define CITY_H_
+
 #include<string>
-#include "Player.h"
+#include"Player.h"
 using namespace std;
 
+class Player;
+
 class City{
+
 private:
-	int number;
+	 int number;
 	string name;
+	int cost;
 	bool isFull;
-	Player& player;
+	Player* player;
 
 public:
-	City(int num, string name);
+	City(int num, string name, int cost);
 	void setNum(int num);
 	void setName(string name);
 	void setFull(bool isFull);
-	void setPlayer(Player& owner);
-	int getNum(){return number;}
-	string getName(){return name;}
-	bool getFull(){return isFull;}
-	Player getPlayer(){return player;}
+	void setPlayer(Player* owner);
+	int getNum();
+	int getCost();
+	string getName();
+	bool getFull();
+	Player* getPlayer();
+	int incrementNum();
+	int count = 0;
+
+
 
 };
 

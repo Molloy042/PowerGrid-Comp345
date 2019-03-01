@@ -13,12 +13,18 @@
 
 
 
-City::City(int num, string names){
-	Player p;
+City::City(int num , string names, int costs){
+	
 	number = num;
 	name = names;
+	cost = costs;
 	isFull = false;
-	player = p;
+	player = new Player;
+	incrementNum();
+}
+
+int City::incrementNum() {
+	return ++count;
 }
 
 void City::setNum(int num){
@@ -33,9 +39,10 @@ void City::setFull(bool isFulls){
 	isFull = isFulls;
 }
 
-void City::setPlayer(Player& owner){
+void City::setPlayer(Player* owner){
 	if(getFull()==false){
 		player = owner;
+		player->cityOwned.push_back(getName());
 		setFull(true);
 	}
 	else{
@@ -44,3 +51,8 @@ void City::setPlayer(Player& owner){
 
 }
 
+int City::getNum(){return number;}
+int City::getCost(){return cost;}
+string City::getName(){return name;}
+bool City::getFull(){return isFull;}
+Player* City::getPlayer(){return player;}

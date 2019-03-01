@@ -9,7 +9,10 @@
 #define PLAYER_H_
 #include "City.h"
 #include <iostream>
+#include <vector>
 using namespace std;
+
+class City;
 
 class Player{
 	public:
@@ -21,16 +24,17 @@ class Player{
 		void setElektro(int Pmoney);
 		void setColour(string colour);
 		void setPlayerNum(int p_num);
-		string getPlayer(){return name;}
-		int getPlayerNum(){return player_num;};
-		int getElektro(){return elektro;}
+		string getPlayer();
+		int getPlayerNum();
+		int getElektro();
+		vector<string> cityOwned;//City cityOwned;
+		string showCityOwned();
 
 	private:
 		string name;
 		int elektro;
 		string colour;
 		int player_num;
-		//City cityOwned;
 
 };
 

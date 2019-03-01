@@ -27,4 +27,18 @@ void Player::setElektro(int money_spent){
 	elektro = elektro - money_spent;
 }
 
+string Player::showCityOwned(){
+	cout << getPlayer() << " owns: ";
+	 for (int i = 0; i < (int)cityOwned.size(); i++){
+	        cout<< cityOwned.at(i) << ", ";
+	 }
+	 return "\n";
+
+}
+
+string Player::getPlayer(){return name;}
+int Player::getPlayerNum(){return player_num;};
+int Player::getElektro(){return elektro;}
+
+
 
